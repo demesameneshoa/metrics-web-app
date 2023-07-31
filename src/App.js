@@ -1,9 +1,15 @@
+import Header from './components/Header';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <h1>Metrics web app</h1>
+      <span>
+        Metrics web app
+      </span>
+      <span>
+        <Header />
+      </span>
     </div>
   );
 }
