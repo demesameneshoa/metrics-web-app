@@ -1,0 +1,38 @@
+import React from 'react';
+import PropTypes from 'prop-types';
+import { useDispatch } from 'react-redux';
+import { Link } from 'react-router-dom';
+import { getCities } from '../redux/AQSlice';
+
+const Country = ({
+  name, number, vector, cities,
+}) => {
+  const mapStyle = {
+    background: `url(${vector}) no-repeat center center/cover`,
+  };
+  const dispatch = useDispatch();
+
+  const handleClick = () => {
+    dispatch(getCities(cities));
+  };
+
+  return (
+    <Link to="/cities" onClick={handleClick} className="wrapper">
+      <i className="right_arrow" />
+      <div className="map" style={mapStyle} />
+      <div className="info">
+        <h3>{name}</h3>
+        <span>{number}</span>
+      </div>
+    </Link>
+  );
+};
+
+Country.propTypes = {
+  name: PropTypes.string.isRequired,
+  number: PropTypes.number.isRequired,
+  vector: PropTypes.string.isRequired,
+  cities: PropTypes.instanceOf(Array).isRequired,
+};
+
+export default Country;

@@ -1,17 +1,16 @@
-import Header from './components/Header';
-import './App.css';
+import React from 'react';
+import { Route, Routes } from 'react-router-dom';
+import Home from './pages/Home';
+import Cities from './pages/Cities';
+import Details from './pages/Details';
+import './styles/App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <span>
-        Metrics web app
-      </span>
-      <span>
-        <Header />
-      </span>
-    </div>
-  );
-}
+const App = () => (
+  <Routes>
+    <Route path="/" element={<Home />} />
+    <Route path="/cities" element={<Cities />} />
+    <Route path="/details" element={<Details />} />
+  </Routes>
+);
 
 export default App;
