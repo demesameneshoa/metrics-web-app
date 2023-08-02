@@ -9,7 +9,7 @@ const Home = () => {
   return (
     <>
       <div className="App">
-        <Header />
+        <Header previous=" " />
         <Hero />
         <div className="countries">
           { countries.map((country) => (
