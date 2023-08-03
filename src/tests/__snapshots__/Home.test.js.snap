@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Home unit test Home page Renders Properly  Home Page component renders properly  1`] = `
+exports[`Home page Renders Properly  Home Page component renders properly  1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>

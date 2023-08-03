@@ -4,23 +4,23 @@ import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import configureStore from '../redux/store';
 import '@testing-library/jest-dom/extend-expect';
-import Home from '../pages/Home';
+import Header from '../components/Header';
 
-describe('Home page Renders Properly ', () => {
+describe('Header Component Renders Properly ', () => {
   const component = (
     <Provider store={configureStore}>
       <BrowserRouter>
-        <Home />
+        <Header />
       </BrowserRouter>
     </Provider>
   );
-  test('Home Page component renders properly ', () => {
+  test('Header Component component renders properly ', () => {
     const tree = render(component);
     expect(tree).toMatchSnapshot();
   });
-  test('Should render the correct hero', () => {
+  test('Should render the back link', () => {
     render(component);
-    const element = screen.getByText('Air Quality Metrics');
+    const element = screen.getByRole('link');
     expect(element).toBeInTheDocument();
   });
 });
