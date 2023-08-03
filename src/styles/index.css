@@ -66,7 +66,7 @@ h2 {
 li {
   list-style: none;
   height: 2rem;
-  text-justify:auto;
+  text-justify: auto;
 }
 
 ul {
@@ -82,19 +82,20 @@ li:nth-child(odd) {
 }
 
 .details_wrapper {
-  margin: 0.5rem}
+  margin: 0.5rem;
+}
 
 .aqi_details {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  align-items:center;
+  align-items: center;
   justify-content: space-between;
   background-color: #5271aa;
 }
 
 .aqi_details li {
   border: 1px solid white;
-  padding-left: 1rem ;
+  padding-left: 1rem;
   padding-top: 1rem;
   height: 3rem;
 }
