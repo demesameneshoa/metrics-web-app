@@ -10,6 +10,8 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
+  margin-top: 1rem;
+  color: white;
 }
 
 .header-icons {
@@ -48,4 +50,64 @@ h2 {
 .countries {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+}
+
+.country {
+  width: 100%;
+  position: relative;
+  height: 8rem;
+  padding-top: 1rem;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #4369b2;
+}
+
+li {
+  list-style: none;
+  height: 2rem;
+  text-justify:auto;
+}
+
+ul {
+  padding: 0.5rem;
+}
+
+li:nth-child(odd) {
+  background-color: #5271aa;
+}
+
+.cityname {
+  height: 1rem;
+}
+
+.details_wrapper {
+  margin: 0.5rem}
+
+.aqi_details {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items:center;
+  justify-content: space-between;
+  background-color: #5271aa;
+}
+
+.aqi_details li {
+  border: 1px solid white;
+  padding-left: 1rem ;
+  padding-top: 1rem;
+  height: 3rem;
+}
+
+.aqi_details li:nth-child(even) {
+  background-color: #4369b2;
+}
+
+.seaarchbar {
+  margin-top: 0.5rem;
+  width: 45%;
+  height: 1.5rem;
+  border-radius: 0.75rem;
+  border: none;
+  padding-left: 0.5rem;
 }

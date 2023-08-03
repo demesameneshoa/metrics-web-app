@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
 const City = ({ city }) => (
-  <Link to="/details" state={{ city: { city } }}>
-    <p>
-      City Name :
+  <Link to="/details" state={{ city: { city } }} style={{ textDecoration: 'none', color: 'white' }}>
+    <p className="cityname">
+      City Name: &nbsp; &nbsp;
       {city}
     </p>
   </Link>
